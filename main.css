@@ -3,6 +3,9 @@ body {
     padding: 0;
     width: 100dvw;
     height: 100dvh;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    user-select: none;
 }
 
 .Main-Div {
@@ -10,7 +13,7 @@ body {
     width: 100dvw;
     height: 100dvh;
     grid-template-columns: 100%;
-    grid-template-rows: 5% 90% 5%;
+    grid-template-rows: 54px 1fr 40px;
     grid-template-areas:
         "head"
         "content"
@@ -19,20 +22,57 @@ body {
 
 .head {
     grid-area: head;
+    background: #1e293b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 20;
 }
 
 .content {
     grid-area: content;
+    background: #0f172a;
+    position: relative;
+    overflow: hidden;
 }
 
 .footer {
     grid-area: footer;
+    background: #1e293b;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    border-top: 1px solid #334155;
+    z-index: 20;
 }
 
 .head p {
-    text-align: center;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.05rem;
 }
 
 .footer p {
+    margin: 0;
     text-align: center;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 3px;
 }
