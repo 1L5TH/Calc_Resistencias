@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.Main-Div {
+    display: grid;
+    width: 100dvw;
+    height: 100dvh;
+    grid-template-columns: 100%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas:
+        "head"
+        "content"
+        "footer";
+}
+
+.head {
+    grid-area: head;
+}
+
+.content {
+    grid-area: content;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.head p {
+    text-align: center;
+}
+
+.footer p {
+    text-align: center;
+}
